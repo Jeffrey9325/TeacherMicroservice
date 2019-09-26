@@ -1,0 +1,85 @@
+[25-09-2019 20:29:12.103][INFO ]: Starting TeacherMicroserviceApplication on LIM-1SRZDC2 with PID 9904 (C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice\target\classes started by jalvasai in C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice)
+[25-09-2019 20:29:12.107][INFO ]: No active profile set, falling back to default profiles: default
+[25-09-2019 20:29:12.176][INFO ]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[25-09-2019 20:29:12.177][INFO ]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[25-09-2019 20:29:13.913][INFO ]: Bootstrapping Spring Data repositories in DEFAULT mode.
+[25-09-2019 20:29:14.024][INFO ]: Finished Spring Data repository scanning in 105ms. Found 1 repository interfaces.
+[25-09-2019 20:29:14.036][INFO ]: Bootstrapping Spring Data repositories in DEFAULT mode.
+[25-09-2019 20:29:14.043][INFO ]: Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+[25-09-2019 20:29:15.040][INFO ]: Tomcat initialized with port(s): 8084 (http)
+[25-09-2019 20:29:15.078][INFO ]: Starting service [Tomcat]
+[25-09-2019 20:29:15.079][INFO ]: Starting Servlet engine: [Apache Tomcat/9.0.24]
+[25-09-2019 20:29:15.312][INFO ]: Initializing Spring embedded WebApplicationContext
+[25-09-2019 20:29:15.313][INFO ]: Root WebApplicationContext: initialization completed in 3134 ms
+[25-09-2019 20:29:16.432][INFO ]: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[25-09-2019 20:29:17.287][INFO ]: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[25-09-2019 20:29:17.329][INFO ]: Opened connection [connectionId{localValue:2, serverValue:121}] to localhost:27017
+[25-09-2019 20:29:17.335][INFO ]: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3723488}
+[25-09-2019 20:29:17.604][INFO ]: LiveReload server is running on port 35729
+[25-09-2019 20:29:17.668][INFO ]: Opened connection [connectionId{localValue:1, serverValue:122}] to localhost:27017
+[25-09-2019 20:29:17.671][INFO ]: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2705232}
+[25-09-2019 20:29:18.496][INFO ]: Initializing ExecutorService 'applicationTaskExecutor'
+[25-09-2019 20:29:18.956][INFO ]: Documentation plugins bootstrapped
+[25-09-2019 20:29:18.974][INFO ]: Found 1 custom documentation plugin(s)
+[25-09-2019 20:29:19.005][INFO ]: Scanning for api listing references
+[25-09-2019 20:29:19.053][INFO ]: Tomcat started on port(s): 8084 (http) with context path ''
+[25-09-2019 20:29:19.059][INFO ]: Started TeacherMicroserviceApplication in 7.578 seconds (JVM running for 8.961)
+[25-09-2019 20:32:09.261][INFO ]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+[25-09-2019 20:32:09.262][INFO ]: Initializing Servlet 'dispatcherServlet'
+[25-09-2019 20:32:09.276][INFO ]: Completed initialization in 14 ms
+[25-09-2019 20:32:09.334][INFO ]: a document was found: 14852678
+[25-09-2019 20:32:09.532][INFO ]: Opened connection [connectionId{localValue:3, serverValue:123}] to localhost:27017
+[25-09-2019 20:32:36.286][INFO ]: Shutting down ExecutorService 'applicationTaskExecutor'
+[25-09-2019 20:32:36.294][INFO ]: Closed connection [connectionId{localValue:3, serverValue:123}] to localhost:27017 because the pool has been closed.
+2019-09-25 20:32:39.069  INFO 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : Starting TeacherMicroserviceApplication on LIM-1SRZDC2 with PID 9904 (C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice\target\classes started by jalvasai in C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice)
+2019-09-25 20:32:39.070  INFO 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : No active profile set, falling back to default profiles: default
+2019-09-25 20:32:39.840  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-25 20:32:39.861  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 1 repository interfaces.
+2019-09-25 20:32:39.864  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-25 20:32:39.871  INFO 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-09-25 20:32:40.246  INFO 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-09-25 20:32:40.248  INFO 9904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-25 20:32:40.249  INFO 9904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-25 20:32:40.296  INFO 9904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-25 20:32:40.297  INFO 9904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1222 ms
+2019-09-25 20:32:40.379  INFO 9904 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-25 20:32:40.401  INFO 9904 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-25 20:32:40.408  INFO 9904 --- [cluster-ClusterId{value='5d8c153805e99626b090f557', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:124}] to localhost:27017
+2019-09-25 20:32:40.412  INFO 9904 --- [cluster-ClusterId{value='5d8c153805e99626b090f558', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:125}] to localhost:27017
+2019-09-25 20:32:40.414  INFO 9904 --- [cluster-ClusterId{value='5d8c153805e99626b090f558', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=809026}
+2019-09-25 20:32:40.417  INFO 9904 --- [cluster-ClusterId{value='5d8c153805e99626b090f557', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3874053}
+2019-09-25 20:32:40.469  INFO 9904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-25 20:32:40.709  INFO 9904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-25 20:32:40.853  INFO 9904 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-09-25 20:32:40.856  INFO 9904 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-09-25 20:32:40.862  INFO 9904 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-25 20:32:40.875  INFO 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-09-25 20:32:40.876  INFO 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : Started TeacherMicroserviceApplication in 1.871 seconds (JVM running for 210.774)
+2019-09-25 20:32:40.882  INFO 9904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-25 20:37:18.806  INFO 9904 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-25 20:37:21.623 info 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : Starting TeacherMicroserviceApplication on LIM-1SRZDC2 with PID 9904 (C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice\target\classes started by jalvasai in C:\Users\jalvasai\Documents\workspace-spring-tool-suite-4-4.3.2.RELEASE\TeacherMicroservice)
+2019-09-25 20:37:21.624 info 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : No active profile set, falling back to default profiles: default
+2019-09-25 20:37:22.427 info 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-25 20:37:22.448 info 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 1 repository interfaces.
+2019-09-25 20:37:22.452 info 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-25 20:37:22.458 info 9904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-09-25 20:37:22.962 info 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2019-09-25 20:37:22.964 info 9904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-25 20:37:22.968 info 9904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-09-25 20:37:23.022 info 9904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-09-25 20:37:23.022 info 9904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1394 ms
+2019-09-25 20:37:23.108 info 9904 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-25 20:37:23.131 info 9904 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-09-25 20:37:23.146 info 9904 --- [cluster-ClusterId{value='5d8c165305e99626b090f559', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:126}] to localhost:27017
+2019-09-25 20:37:23.154 info 9904 --- [cluster-ClusterId{value='5d8c165305e99626b090f559', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1991796}
+2019-09-25 20:37:23.172 info 9904 --- [cluster-ClusterId{value='5d8c165305e99626b090f55a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:127}] to localhost:27017
+2019-09-25 20:37:23.174 info 9904 --- [cluster-ClusterId{value='5d8c165305e99626b090f55a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 0]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=820513}
+2019-09-25 20:37:23.208 info 9904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-25 20:37:23.558 info 9904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-25 20:37:23.748 info 9904 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2019-09-25 20:37:23.751 info 9904 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-09-25 20:37:23.758 info 9904 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-09-25 20:37:23.776 info 9904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2019-09-25 20:37:23.778 info 9904 --- [restartedMain] c.everis.TeacherMicroserviceApplication  : Started TeacherMicroserviceApplication in 2.214 seconds (JVM running for 493.67)
+2019-09-25 20:37:23.787 info 9904 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-25 20:40:37.475 info 9904 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

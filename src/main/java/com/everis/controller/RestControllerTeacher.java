@@ -54,8 +54,14 @@ public class RestControllerTeacher {
    */
   
   @GetMapping("/documents/{document}")
-  public Mono<Teacher> searchbyDocument(@PathVariable final String document) {
-    return repository.searchbyDocument(document);
+  public Mono<ResponseEntity<Teacher>> searchbyDocument(@PathVariable final String document) {
+	  LOG.info("a document was found: " + document);
+    return repository.searchbyDocument(document)
+     .map(show -> new ResponseEntity<>(show, HttpStatus.OK))
+     
+     .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
+     // LOG.error("no document found");
   }
   /**
    * search by rank date of Birth teacher document.
