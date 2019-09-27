@@ -1,6 +1,5 @@
 package com.everis.controller;
 
-
 import com.everis.model.Teacher;
 import com.everis.service.TeacherServiceImpl;
 
@@ -30,8 +29,8 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/Teacher/v1.0")
 public class RestControllerTeacher {
-	
-	private static Logger LOG = LoggerFactory.getLogger(RestControllerTeacher.class);
+
+  private static Logger LOG = LoggerFactory.getLogger(RestControllerTeacher.class);
   /**
    * Teacher Service Implement.
    */
@@ -44,8 +43,12 @@ public class RestControllerTeacher {
    */
   
   @GetMapping("/names/{fullName}")
-  public Flux<Teacher> searchbyName(@PathVariable final String fullName) {
-    return repository.searchbyName(fullName);
+  public Flux<ResponseEntity<Teacher>> searchbyName(@PathVariable final String fullName) {
+    return repository.searchbyName(fullName)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.searchbyName >> fullName found: " + fullName))
+    .map(show -> new ResponseEntity<>(show, HttpStatus.OK))
+    .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
   /**
    * search by identification document number teacher document.
@@ -55,13 +58,11 @@ public class RestControllerTeacher {
   
   @GetMapping("/documents/{document}")
   public Mono<ResponseEntity<Teacher>> searchbyDocument(@PathVariable final String document) {
-	  LOG.info("a document was found: " + document);
     return repository.searchbyDocument(document)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.searchbyDocument >> document found: " + document))
      .map(show -> new ResponseEntity<>(show, HttpStatus.OK))
-     
      .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-
-     // LOG.error("no document found");
   }
   /**
    * search by rank date of Birth teacher document.
@@ -71,62 +72,52 @@ public class RestControllerTeacher {
    */
   
   @GetMapping("/dates/{fromDate}/{toDate}")
-  public Flux<Teacher> searchbyrankdateofBirth(
+  public Flux<ResponseEntity<Teacher>> searchbyrankdateofBirth(
       @PathVariable @DateTimeFormat(iso = ISO.DATE) final Date fromDate,
       @PathVariable  @DateTimeFormat(iso = ISO.DATE)  final Date toDate) {
-    return repository.searchbyrankdateofBirth(fromDate, toDate);
+    return repository.searchbyrankdateofBirth(fromDate, toDate)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.searchbyrankdateofBirth >> date of birth found: " 
+    + fromDate + " between " + toDate))
+    .map(show -> new ResponseEntity<>(show, HttpStatus.OK))
+    .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
   /**
    * create record teacher document.
-   * @param Teacher teacher
+   * @param teacher teacher
    * @return
    */
   
   @PostMapping("/")
   public Mono<ResponseEntity<Teacher>> createTeacher(@Valid @RequestBody final Teacher teacher) {
     return repository.createTeacher(teacher)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.createTeacher >> created"))
     .then(Mono.just(new ResponseEntity<Teacher>(HttpStatus.CREATED)))
-   
-//    .switchIfEmpty(Mono.error(new ProductNotFoundException("vacio")))
     .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
   /**
    * show all record of teacher document.
    * @return
    */
-  
-  //@HystrixCommand(fallbackMethod = "metodoalternativo")
+
   @GetMapping("/")
   public Flux<Teacher> allTeachers() {  
     return repository.allTeachers();
   }
   
-//  
-//	  String <teachers> teacher = new teachers("17", "pepito", "m", "dni", date, "14528985"); 
-//	  teacher.flatMap(mapper)
-//	  List<String> teacher =  Arrays.asList("17", "pepito", "m", "dni", date.toString(), "14528985"); 
-//	  teacher.stream()
-//	  
-
-	
-	  
-//	  teacher.setId("17");
-//	  teacher.setFullName("pepito");
-//	  teacher.setGender("m");
-//	  teacher.setTypeDocument("dni");
-//	  teacher.setDateofBirth(date);
-//	  teacher.setDocumentNumber("14528985");
   /**
    * modify record of teacher document.
    * @param id identification
-   * @param Teacher teacher
+   * @param teacher teacher
    * @return
    */
-  
   @PutMapping("/{id}")
   public Mono<ResponseEntity<Teacher>> modifyTeacher(@PathVariable final String id,
       @Valid @RequestBody final Teacher teacher) {
     return repository.findbyId(id)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.modifyTeacher >> id found"))
     .flatMap(people -> {
       people.setId(id);
       people.setFullName(teacher.getFullName());
@@ -136,6 +127,8 @@ public class RestControllerTeacher {
       people.setDocumentNumber(teacher.getDocumentNumber());
       return repository.modifyTeacher(people);
     })
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.modifyTeacher >> modify"))
     .map(update -> new ResponseEntity<>(update, HttpStatus.OK))
     //.orElseThrow(() -> new ProductNotFoundException("vacio"))
     //.orElseThrow(Mono.error(new ProductNotFoundException("vacio")))
@@ -146,15 +139,19 @@ public class RestControllerTeacher {
    * @param id identification
    * @return
    */
- 
+  
   @DeleteMapping("/{id}")
   public Mono<ResponseEntity<Void>> deleteteachers(@PathVariable final String id) {
     return repository.findbyId(id)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.deleteteachers >> id found"))
     .flatMap(people ->
     repository.deleteTeacher(people)
+    .doOnNext(mensaje -> 
+    LOG.info("RestControllerTeacher.deleteteachers >> removed"))
     .then(Mono.just(new ResponseEntity<Void>(HttpStatus.NO_CONTENT)))  
     )
     .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
-   
+     
 }

@@ -37,7 +37,7 @@ public interface ITeacherService {
   Flux<Teacher> searchbyrankdateofBirth(Date fromDate, Date toDate);
   /**
    * create record teacher document.
-   * @param Teacher teacher
+   * @param teacher teacher
    * @return
    */
   
@@ -50,14 +50,14 @@ public interface ITeacherService {
   Flux<Teacher> allTeachers();
   /**
    * modify record teacher document.
-   * @param Teacher teacher
+   * @param teacher teacher
    * @return
    */
   
   Mono<Teacher> modifyTeacher(Teacher teacher);
   /**
    * delete record of teacher document.
-   * @param Teacher teacher
+   * @param teacher teacher
    * @return
    */
   

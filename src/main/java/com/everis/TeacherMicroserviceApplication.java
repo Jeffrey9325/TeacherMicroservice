@@ -9,8 +9,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 @SpringBootApplication
 public class TeacherMicroserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TeacherMicroserviceApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(TeacherMicroserviceApplication.class, args);
+  }
 
 }
