@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
  */
 
 @Repository
-public interface ReactiveRepository extends ReactiveMongoRepository<Teacher, String> {
+public interface ReactiveRepository extends ReactiveMongoRepository<Teacher, Serializable> {
   /**
    * find by Full Name teacher document.
    * @param fullName full name
